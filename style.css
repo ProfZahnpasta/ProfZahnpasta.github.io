@@ -1,0 +1,213 @@
+.red-button { 
+    background-color: red; 
+    color: white; 
+    padding: 10px 20px; 
+    border: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    position: sticky;
+} 
+.red-button:hover { 
+    background-color: darkred; 
+} 
+
+.button {
+    background-color: grey;
+    font-family: "papyrus";
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.normalfont {
+    font-weight: lighter;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+
+
+.img {
+    filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.onimage {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.zen-dots-regular {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .rubik-glitch-regular {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.fontlarge{
+    font-size: large;
+}
+
+.fontlarger{
+    font-size:larger;
+}
+
+.buttononimage {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blackground {
+    background-color: rgb(31,31,31);
+}
+    
+.jha {
+    display: flex;
+    justify-content: space-between;
+}
+.gray-button { 
+    background-color: gray; 
+    color: white; 
+    padding: 10px 20px; 
+    border: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    position: sticky;
+    font-family: "papyrus";
+    text-align: center;
+} 
+.gray-button:hover { 
+    background-color: darkgray; 
+} 
+
+.box {
+    background-color: blue;
+    width: 300px;
+    border: 20px solid black;
+    padding: 50px;
+    margin: 200px;
+}
+
+.centered {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.zen-dots-regular-black {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+
+}
+
+.galleryimg {
+    margin: 5px;
+    border: 5px solid #140101;
+    float: left;
+    overflow: hidden;
+}
+.redbackground {
+    background-color: darkred;
+}
+
+.gallerycentered {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+.switchbutton {
+    color: grey; 
+    padding: 10px 20px; 
+    border: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    position: sticky;
+    font-family: "Zen Dots";
+}
+
+.switchbutton:hover { 
+    background-color: darkgray; 
+} 
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+.flex-column {
+    display: flex;
+}
+
+  a:link { 
+    text-decoration: none; 
+} 
+
+div.parentElement{text-align: center;}
+
+.btn-work {
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+}
+
+#footer {
+    background-color: grey;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_elements {
+    margin-left: 30px;
+    margin-left: 30px;
+    color: black;
+}
+
+.backgroundblack {
+    background-color: #000200;
+}
+
+.taco-video {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    height: auto;
+    z-index: 0;
+}
+.taco-video-weiteroben {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    width: 200px;
+    height: auto;
+    z-index: 0;
+}
