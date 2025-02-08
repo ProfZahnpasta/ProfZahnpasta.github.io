@@ -6,7 +6,7 @@
     border-radius: 5px; 
     cursor: pointer; 
     position: sticky;
-    font-family: "Trebuchet MS";
+    font-family: "Zen Dots", sans-serif;
 } 
 .red-button:hover { 
     background-color: darkred; 
@@ -14,7 +14,7 @@
 
 .button {
     background-color: grey;
-    font-family: "Trebuchet MS";
+    font-family: "Zen Dots", sans-serif;
     font-size: 20px;
     text-align: center;
     align-items: center;
@@ -94,7 +94,7 @@
     border-radius: 5px; 
     cursor: pointer; 
     position: sticky;
-    font-family: "Trebuchet MS";
+    font-family: "Zen Dots", sans-serif;
     text-align: center;
 } 
 .gray-button:hover { 
