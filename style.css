@@ -6,6 +6,7 @@
     border-radius: 5px; 
     cursor: pointer; 
     position: sticky;
+    font-family: "Trebuchet MS";
 } 
 .red-button:hover { 
     background-color: darkred; 
@@ -13,7 +14,7 @@
 
 .button {
     background-color: grey;
-    font-family: "papyrus";
+    font-family: Papyrus;
     font-size: 20px;
     text-align: center;
     align-items: center;
