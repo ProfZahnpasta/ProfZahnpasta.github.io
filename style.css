@@ -14,7 +14,7 @@
 
 .button {
     background-color: grey;
-    font-family: Papyrus;
+    font-family: "Trebuchet MS";
     font-size: 20px;
     text-align: center;
     align-items: center;
@@ -94,7 +94,7 @@
     border-radius: 5px; 
     cursor: pointer; 
     position: sticky;
-    font-family: "papyrus";
+    font-family: "Trebuchet MS";
     text-align: center;
 } 
 .gray-button:hover { 
