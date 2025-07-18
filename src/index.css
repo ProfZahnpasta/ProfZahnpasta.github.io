@@ -2,46 +2,205 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
+/* Custom CSS for cyberpunk effects */
+@layer base {
+  body {
+    cursor: none;
+  }
+  
+  * {
+    cursor: none !important;
+  }
 }
 
+@layer components {
+  .nav-link {
+    @apply text-green-300 hover:text-green-400 transition-all duration-300 relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #22c55e, #10b981);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .cyber-button {
+    @apply inline-flex items-center px-6 py-3 border-2 border-green-500 text-green-400 font-semibold 
+           hover:bg-green-500/10 hover:text-green-300 hover:border-green-400 hover:shadow-lg 
+           hover:shadow-green-500/25 transition-all duration-300 relative overflow-hidden;
+  }
+  
+  .cyber-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .cyber-button:hover::before {
+    left: 100%;
+  }
+  
+  .project-card {
+    @apply bg-black/50 border border-green-500/20 rounded-lg overflow-hidden 
+           hover:border-green-500/40 hover:shadow-xl hover:shadow-green-500/10 
+           transition-all duration-500 transform hover:-translate-y-2;
+  }
+  
+  .project-image {
+    @apply w-full h-64 bg-cover bg-center relative;
+  }
+  
+  .project-overlay {
+    @apply absolute inset-0 bg-black/80 p-6 flex flex-col justify-center items-center
+           opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .project-link {
+    @apply text-green-400 hover:text-green-300 transition-colors duration-300 
+           p-2 border border-green-500/30 rounded hover:border-green-500/60
+           hover:bg-green-500/10;
+  }
+  
+  .tech-tag {
+    @apply text-xs px-2 py-1 bg-green-500/20 text-green-300 rounded border border-green-500/30;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.8s ease-out;
+}
+
+.animate-glitch {
+  animation: glitch 0.5s ease-in-out;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animate-slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Matrix effect */
+.matrix-bg {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+}
+
+/* Typewriter cursor */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  animation: blink 1s infinite;
+}
+
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  @apply bg-primary text-light-gray;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Custom cursor styles */
-* {
-  cursor: none;
+::-webkit-scrollbar-track {
+  background: #000;
 }
 
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  border: 2px solid theme('colors.secondary');
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.2s ease;
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 4px;
 }
 
-.custom-cursor-dot {
-  width: 4px;
-  height: 4px;
-  background-color: theme('colors.secondary');
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
 }
 
-/* Hover effect for interactive elements */
-a:hover ~ .custom-cursor,
-button:hover ~ .custom-cursor {
-  transform: scale(1.5);
+/* Responsive design */
+@media (max-width: 768px) {
+  .nav-link {
+    @apply text-sm;
+  }
+  
+  .cyber-button {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .project-card {
+    @apply hover:transform-none;
+  }
 }
